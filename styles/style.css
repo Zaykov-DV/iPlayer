@@ -221,6 +221,15 @@ main {
       color: #aaa;
       opacity: .3; }
 
+.radio-stop {
+  margin-right: 50px; }
+
+.radio-icon {
+  margin: 5px; }
+
+.radio-volume {
+  max-width: 200px; }
+
 .audio {
   display: flex;
   flex-direction: column;
@@ -446,6 +455,15 @@ input[type=range]:focus::-ms-fill-upper {
   .video-time {
     margin: 15px;
     font-weight: 700; }
+
+.video-icon {
+  margin: 5px; }
+
+.video-volume {
+  max-width: 100px; }
+
+.video-fullscreen {
+  cursor: pointer; }
 
 .video {
   display: none; }

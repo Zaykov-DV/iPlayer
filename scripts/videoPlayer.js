@@ -15,6 +15,10 @@ video-time__total
     const videoTimePassed = document.querySelector('.video-time__passed');
     const videoTimeTotal = document.querySelector('.video-time__total');
     const videoProgress = document.querySelector('.video-progress');
+    const videoFullScreen = document.querySelector('.video-fullscreen');
+    const videoVolume = document.querySelector('.video-volume');
+
+    console.log(document.querySelector('.video-player'))
 
     const toggleIcon = () => {
         if (videoPlayer.paused) {
@@ -67,13 +71,22 @@ video-time__total
 
     });
 
-        videoProgress.addEventListener('change', () => {
+        videoProgress.addEventListener('input', () => {
             const duration = videoPlayer.duration;
             const value = videoProgress.value;
 
             videoPlayer.currentTime = (value * duration) / 100;   //место на которое кликнули в сек.
 
         });
+
+        videoFullScreen.addEventListener('click', () => {
+            videoPlayer.requestFullscreen();
+        });
+
+        videoVolume.addEventListener('input', () => {
+            videoPlayer.volume = videoVolume.value / 100;
+    });
+
 };
 
 
