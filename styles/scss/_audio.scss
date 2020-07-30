@@ -126,3 +126,18 @@
     }
   }
 }
+
+.audio-volume-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.audio-icon {
+  margin: 5px;
+}
+
+.audio-volume {
+  max-width: 200px;
+}

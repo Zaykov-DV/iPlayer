@@ -1,13 +1,6 @@
-export const videoPlayerInit = () => {
+import  {addZero} from "./subscript.js";
 
-    /*
-video-player
-video-button__play
-video-button__stop
-video-time__passed
-video-progress
-video-time__total
-     */
+export const videoPlayerInit = () => {
 
     const videoPlayer = document.querySelector('.video-player');
     const videoButtonPlay = document.querySelector('.video-button__play');
@@ -17,8 +10,6 @@ video-time__total
     const videoProgress = document.querySelector('.video-progress');
     const videoFullScreen = document.querySelector('.video-fullscreen');
     const videoVolume = document.querySelector('.video-volume');
-
-    console.log(document.querySelector('.video-player'))
 
     const toggleIcon = () => {
         if (videoPlayer.paused) {
@@ -44,7 +35,6 @@ video-time__total
         videoPlayer.currentTime = 0;
     }
 
-    const addZero = n => n < 10 ? '0' + n : n;
 
     videoPlayer.addEventListener('click', togglePlay);
     videoButtonPlay.addEventListener('click', togglePlay);
@@ -58,14 +48,14 @@ video-time__total
         const currentTime = videoPlayer.currentTime;
         const duration = videoPlayer.duration;
 
-        let minutePassed = Math.floor(currentTime / 60 );
+        let minutesPassed = Math.floor(currentTime / 60 );
         let secondsPassed = Math.floor( currentTime % 60 );
 
-        let minuteTotal = Math.floor(duration / 60 );
+        let minutesTotal = Math.floor(duration / 60 );
         let secondsTotal = Math.floor( duration % 60 );
 
-        videoTimePassed.textContent = `${addZero(minutePassed)}:${addZero(secondsPassed)}`;
-        videoTimeTotal.textContent = `${addZero(minuteTotal)}:${addZero(secondsTotal)}`;
+        videoTimePassed.textContent = `${addZero(minutesPassed)}:${addZero(secondsPassed)}`;
+        videoTimeTotal.textContent = `${addZero(minutesTotal)}:${addZero(secondsTotal)}`;
 
         videoProgress.value = (currentTime / duration) * 100
 

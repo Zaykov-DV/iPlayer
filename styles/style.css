@@ -324,6 +324,17 @@ main {
     .audio-footer {
       height: 120px; } }
 
+.audio-volume-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.audio-icon {
+  margin: 5px; }
+
+.audio-volume {
+  max-width: 200px; }
+
 input[type=range] {
   -webkit-appearance: none;
   margin: 18px 0;

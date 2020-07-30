@@ -27,6 +27,8 @@
 	<link rel="stylesheet" href="styles/style.min.css">
 	<link rel="stylesheet" href="styles/style.css">
 	<script src="scripts/index.js" type="module"></script>
+	<script src="https://kit.fontawesome.com/60bb97b750.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -82,6 +84,7 @@
 			<footer class="footer-fix audio-footer">
 				<nav class="audio-navigation">
 					<div class="audio-btns">
+						<button class="audio-button audio-button__stop fa fa-stop"></button>
 						<button class="audio-button audio-button__prev fa fa-step-backward"></button>
 						<button class="audio-button audio-button__play fa fa-play"></button>
 						<button class="audio-button audio-button__next fa fa-step-forward"></button>
@@ -91,6 +94,13 @@
 						<div class="audio-progress__timing"></div>
 					</div>
 					<span class="audio-time audio-time__total">00:00</span>
+					<div class="audio-volume-container">
+						<span class="fa fa-volume-down audio-icon"></span>
+						<input type="range" class="audio-volume" min="0" max="100" step="1" value="100">
+						<span class="fa fa-volume-up audio-icon"></span>
+						<button class="audio-button audio-button__mute fa fa-volume-mute"></button>
+					</div>
+
 				</nav>
 			</footer>
 		</article>
